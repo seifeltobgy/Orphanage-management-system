@@ -1,0 +1,16 @@
+<script type="text/javascript">
+    function EnableDisableTextBox(chkPassport) {
+        var txtPassportNumber = document.getElementById("txtPassportNumber");
+        txtPassportNumber.disabled = chkPassport.checked ? false : true;
+        if (!txtPassportNumber.disabled) {
+            txtPassportNumber.focus();
+        }
+    }
+</script>
+<label for="chkPassport">
+    <input type="checkbox" id="chkPassport" onclick="EnableDisableTextBox(this)" />
+    Do you have Passport?
+</label>
+<br />
+Passport Number:
+<input type="text" id="txtPassportNumber" disabled="disabled" />
